@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+    background: #e6e9e9;
+    color: black;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #505050;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #1E2832;
+}
+
+.nav {
+
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    /*	opacity: .9;*/
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.7s;
+    overflow-y: show;
+
+    border-right: 5px solid #505050;
+}
+
+.nav a {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    word-wrap: break-word;
+    display: block;
+    padding: 20px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #505050;
+
+}
+
+.nav a:hover {
+    color: #DDD;
+    transition: 0.4s;
+    text-decoration: none;
+    background-color: #1E2832;
+}
+
+.nav .close {
+    position: absolute;
+    top: 0;
+    right: 22px;
+    margin-left: 50px;
+    font-size: 30px
+}
+
+.slide {
+    top: 0;
+    position: fixed;
+    padding: 20px;
+    width: 100%;
+    background-color: #1D2833;
+}
+
+.slide a {
+    color: #fff;
+    font-size: 20px;
+}
+
+#aligngites {
+    display: inline-block;
+    margin-left: 10px;
+
+    float: right;
+
+
+}
+
+#space {
+    margin: 0 10px 0 10px;
+}
+
+#content {
+
+
+    transition: margin-left 0.7s;
+
+    width: 100%;
+
+}
+
+#hamburger {
+
+
+    display: inline-block;
+    color: white;
+    font-size: 1.5em;
+}
+
+.RightMenu {
+
+    text-align: right;
+    display: block;
+    text-align: center;
+    float: right;
+
+    height: 40px;
+    width: 40px;
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+
+
+}
+
+.RightMenu a {
+    background: #fefeff;
+    border-radius: 10px;
+    display: block;
+    text-decoration: none;
+    color: #505050;
+
+}
+
+.RightMenu img {
+
+    height: 30px;
+    width: 30px;
+
+}
+
+.RightMenu a:hover {
+    background-color: #1E2832;
+    color: aliceblue;
+
+}
+
+#menu0 {
+     
+    margin: 10px;
+    right: 5px;
+    top: 100px;
+    position: fixed;
+}
+
+#menu1 {
+    margin: 10px;
+    right: 5px;
+    top: 200px;
+    position: fixed;
+}
+
+#menu2 {
+    margin: 10px;
+    right: 5px;
+    top: 300px;
+    position: fixed;
+}
+
+#menu3 {
+    margin: 10px;
+    right: 5px;
+    top: 400px;
+    position: fixed;
+}
+
+#logo {
+    margin-left: 10px;
+    height: 25px;
+    justify-content: space-between;
+}
+
+.main {
+    width: 100%;
+
+    padding: 2em 2em 4em;
+    margin-top: ;
+    overflow: hidden;
+    margin: 70px auto auto auto;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+
+    line-height: 1.5;
+
+    max-width: 1000px;
+
+}
+
+.main img {
+
+
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#home {}
+
+#undertitle1 {
+    float: right;
+    width: 100px;
+
+}
+
+h1 {
+
+    font-weight: 1000;
+}
+
+p {
+    clear: both;
+    text-indent: 20px;
+    text-align: justify;
+}
+
+#clear {
+    clear: both;
+}
+
+pre {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1em;
+    color: aliceblue;
+    background-color: #1D2833;
+     word-spacing: 4px;
+    letter-spacing: 1px;
+
+}
+
+pre b {
+    color: green
+}
+
+/*	Do Splash Screena */
+.welcome .splash {
+    height: 0px;
+    padding: 0px;
+    border: 130em solid #1D2833;
+    position: fixed;
+    left: 50%;
+    top: 100%;
+    display: block;
+    box-sizing: initial;
+    overflow: hidden;
+
+    border-radius: 0%;
+    transform: translate(-50%, -50%);
+    animation: puff 0.2s 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.3s 0.5s linear forwards;
+}
+
+@keyframes puff {
+    0% {
+        top: 100%;
+        height: 0px;
+        padding: 0px;
+    }
+
+    100% {
+        top: 50%;
+        height: 100%;
+        padding: 0px 100%;
+        visibility: hidden;
+    }
+}

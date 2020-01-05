@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Podstawowe elementy składni programowania w Języku Dart .">
+    <meta name="keywords" content="Dart,Language,poradnik,kurs,Polska">
+    <meta name="author" content="Paweł Krzyściak">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dart poradnik</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="icon" href="../IMAGE/Dart-logo.png">
+
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <script src="../JS/script.js"></script>
+</head>
+
+<body class="welcome">
+    <span id="splash-overlay" class="splash"> </span>
+    <div class="RightMenu" id="menu0">
+        <a onclick="hideShow()">
+            <img src="https://pngimage.net/wp-content/uploads/2018/06/more-apps-icon-png-7.png" />
+            <span id="change">Zwiń</span></a>
+    </div>
+    <div class="RightMenu" id="menu1">
+        <a href="../index.html">
+            <img src="https://raw.githubusercontent.com/DinoLeung/TeleDart/master/example/dash_paper_plane.svg?sanitize=true" />
+            <span>Home</span></a>
+    </div>
+    <div class="RightMenu" id="menu2">
+        <a href="https://dart.dev/">
+            <img src="https://stickker.net/wp-content/uploads/2018/11/dart.png.png" />
+            <span>Dart</span></a>
+    </div>
+   <div class="RightMenu" id="menu3">
+        <a href="http://anioncode.pl/">
+            <img src="http://anioncode.pl/Img/rysunek3.png" />
+            <span>Strona</span></a>
+    </div>
+
+    <div id="content">
+
+
+        <div class="slide">
+            <a id="hamburger" href="#" onclick="openSlideMenu()">
+                <i class="fas fa-bars"></i>
+            </a>
+            <img id="logo" src="https://dart.dev/assets/shared/dart/logo+text/horizontal/white-e71fb382ad5229792cc704b3ee7a88f8013e986d6e34f0956d89c453b454d0a5.svg" alt="Somtehing gone wrong">
+            <div id="aligngites">
+                <a href="https://github.com/Lukieoo" target="_blank" class="right" id="space"><i class="fab fa-github"></i></a>
+
+                <a href="https://www.youtube.com/channel/UCseP9k1DwSAqzZ-iyeAlTvg" target="_blank" class="right" id="space"><i class="fab fa-youtube"></i></a>
+
+                <a href="http://anioncode.pl/" target="_blank" class="right" id="space"><i class="fab fa-font-awesome"></i></a>
+            </div>
+        </div>
+
+
+
+        <div id="menu" class="nav">
+            <a href="#" class="close" onclick="closeSlideMenu()">
+                <i class="fas fa-times"></i>
+            </a>
+            <a href="../index.html" onclick="closeSlideMenu()">Wprowadzenie</a>
+            <a href="side1.html" onclick="closeSlideMenu()">Komentarze</a>
+            <a href="side2.html" onclick="closeSlideMenu()">Zmienne</a>
+            <a href="side3.html" onclick="closeSlideMenu()">Instrukcje Warunkowe</a>
+            <a href="side4.html" onclick="closeSlideMenu()">Pętle</a>
+            <a href="side5.html" onclick="closeSlideMenu()">Funkcje</a>
+            <a href="side6.html" onclick="closeSlideMenu()">Obsługa wyjątków </a>
+            <a href="side7.html" onclick="closeSlideMenu()">Klasy </a>
+            <a href="side8.html" onclick="closeSlideMenu()">Konstruktor </a>
+            <a href="side9.html" onclick="closeSlideMenu()">Dziedziczenie </a>
+            <a href="#" onclick="closeSlideMenu()">Ciąg dalszy nastąpi :)</a>
+            <!--
+            <a href="side10.html" onclick="closeSlideMenu()">Klasy Abstrakcyjne </a>
+            <a href="side11.html" onclick="closeSlideMenu()">Instrukcje Lambda </a>
+            <a href="side12.html" onclick="closeSlideMenu()">Listy,Hash ,Set </a>
+-->
+        </div>
+
+
+    </div>
+    <div class="main">
+        <img src="../IMAGE/while-coyote.jpg">
+        <h1>5.0 Pętle</h1>
+        <p>Tutaj też ,specjalnie nie powinna zaskoczyć nas składnia ,gdyż jest zbliżona jak w języku Java .</p>
+        <ul>
+            <li>Pętla for</li>
+            <li>Pętla for each</li>
+            <li>Pętla while</li>
+            <li>Pętla do While</li>
+        </ul>
+        <h2>5.1 Pętla for </h2>
+        <span>Składnia jest następująca </span>
+        <code>for([start];[warunek];[krok]){}</code>
+        <pre>
+void main() {
+<b>//Ta pętla wykona się 10 razy </b>
+  for(int a=0;a&lsaquo;a++){
+    print(a);
+  }
+ <b>//Ta pętla zrobi dokładnie to samo</b>
+   for(var a=0;a&lsaquo;10;a++){
+    print(a);
+  } 
+  }</pre>
+        <h2>5.2 Pętla for each </h2>
+        <span>W języku Dart mamy możliwość przechodzenia przez elementy naszej na przykład listy nie znając jej rozmiaru .Pętla sama inteligentnie zakończy się gdy napotka ostatni element . Podobnie zresztą jak w języku Java .</span>
+        <code>for([Nasza Obiekt] in [Nazwa obiektu])</code>
+        <pre>
+<b>//Tworzymy elementy dopisując do naszej listy</b>
+  List&lsaquo;String&rsaquo; list = new List&lsaquo;String&rsaquo;();
+    list.add('one');
+    list.add('two');
+    list.add('three');
+<b>//Wyświetlamy naszą listę</b>   
+  for(String a in list){
+    print(a);
+  } </pre>
+        <span>Wynik</span>
+        <pre>
+one
+two
+three</pre>
+        <h2>5.3 Pętla While i do While</h2>
+        <span>Dobrze nam znane bo takie same . Trzeba pamiętać ,że pętla do While wykona się przynajmniej raz .</span>
+        <code>while([warunek])</code><span> lub </span><code>do ... while([warunek])</code>
+        <pre>
+void main() {
+
+  int a=2;
+  <b>//Ta pętla się nie wykona ponieważ a=2 a nie 1</b>
+  while(a==1){
+    print(a);
+  }
+  
+  <b>//Natomiast ta wyświetli wpierw 2 a później zakończy swoje działanie</b>
+  do{
+     print(a);
+  }
+  while(a==1); 
+}</pre>
+        <h2>5.4 Continue i break</h2>
+        <h3>Continue</h3>
+        <span>Klauzula continue sprawi że pętla się nie przerwie lecz będzie się kontynuwać .</span>
+        <pre>
+void main() {
+<b>//Pętla kontynuje wykonywanie pętli ,lecz pomija zawartą ponieżej treść</b> 
+ for(int a=0;a&lsaquo;a++){
+   <b>//To zostanie pominięte</b>  
+   if(a==8){
+     continue;
+ <b>//To się nigdy nie wykona</b>   
+     print(a);
+   }else{
+     print(a);
+     continue;
+<b>//To się nigdy nie wykona  </b>    
+     print(a);
+   }
+ }
+}
+        </pre>
+        <span>Wynik</span>
+        <pre>
+0
+1
+2
+3
+4
+5
+6
+7
+9</pre>
+        <span>Jak widzisz 8 została pominięta.</span>
+        <h3>Break</h3>
+        <p>Klauzula Break przerwie działanie pętli</p>
+        <pre>
+void main() {
+ 
+ for(int a=0;a&lsaquo;a++){
+    if(a==2){
+    <b>//Przerwanie</b>
+      break;
+    }else{
+      print(a);
+    }
+ }
+}
+        </pre>
+        <span>Wynik</span>
+        <pre>
+0
+1
+        </pre>
+        <span>Jak widzisz wykonały się 2 przypadki tylko ponieważ gdy program napotkał 2 to przerwał działanie pętli.</span>
+        <p>Dodawanie tytułów do pętli</p>
+        <pre>
+void main() {
+ <b>//Tytuł pętli "label"</b>
+ nazwa1:for(int a=0;a&lsaquo;a++){
+ nazwa2:for(int b=0;b&lsaquo;10;b++){
+      if(b==4){
+        print("a=$a b=$b");
+         <b>//Przerwanei  pętli o tytule  "nazwa1"</b>
+        break nazwa1;
+      }
+  
+  }
+ }
+}</pre>
+        <span>wynik</span>
+        <pre>
+a=0 b=4</pre>
+
+        <footer>
+            <br>
+            <br>
+            <p>Stworzone przez: Paweł Krzyściak</p>
+            <p>Informacje Kontaktowe:</p>
+            <p> <a href="mailto:pawkrzysciak@gmail.com">
+                    pawkrzysciak@gmail.com</a>.</p>
+        </footer>
+    </div>
+
+
+</body></html>

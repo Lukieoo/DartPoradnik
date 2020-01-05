@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Podstawowe elementy składni programowania w Języku Dart .">
+    <meta name="keywords" content="Dart,Language,poradnik,kurs,Polska">
+    <meta name="author" content="Paweł Krzyściak">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dart poradnik</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="icon" href="../IMAGE/Dart-logo.png">
+
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <script src="../JS/script.js"></script>
+</head>
+
+<body class="welcome">
+    <span id="splash-overlay" class="splash"> </span>
+    <div class="RightMenu" id="menu0">
+        <a onclick="hideShow()">
+            <img src="https://pngimage.net/wp-content/uploads/2018/06/more-apps-icon-png-7.png" />
+            <span id="change">Zwiń</span></a>
+    </div>
+    <div class="RightMenu" id="menu1">
+        <a href="../index.html">
+            <img src="https://raw.githubusercontent.com/DinoLeung/TeleDart/master/example/dash_paper_plane.svg?sanitize=true" />
+            <span>Home</span></a>
+    </div>
+    <div class="RightMenu" id="menu2">
+        <a href="https://dart.dev/">
+            <img src="https://stickker.net/wp-content/uploads/2018/11/dart.png.png" />
+            <span>Dart</span></a>
+    </div>
+   <div class="RightMenu" id="menu3">
+        <a href="http://anioncode.pl/">
+            <img src="http://anioncode.pl/Img/rysunek3.png" />
+            <span>Strona</span></a>
+    </div>
+
+    <div id="content">
+
+
+        <div class="slide">
+            <a id="hamburger" href="#" onclick="openSlideMenu()">
+                <i class="fas fa-bars"></i>
+            </a>
+            <img id="logo" src="https://dart.dev/assets/shared/dart/logo+text/horizontal/white-e71fb382ad5229792cc704b3ee7a88f8013e986d6e34f0956d89c453b454d0a5.svg" alt="Somtehing gone wrong">
+            <div id="aligngites">
+                <a href="https://github.com/Lukieoo" target="_blank" class="right" id="space"><i class="fab fa-github"></i></a>
+
+                <a href="https://www.youtube.com/channel/UCseP9k1DwSAqzZ-iyeAlTvg" target="_blank" class="right" id="space"><i class="fab fa-youtube"></i></a>
+
+                <a href="http://anioncode.pl/" target="_blank" class="right" id="space"><i class="fab fa-font-awesome"></i></a>
+            </div>
+        </div>
+
+
+
+        <div id="menu" class="nav">
+            <a href="#" class="close" onclick="closeSlideMenu()">
+                <i class="fas fa-times"></i>
+            </a>
+            <a href="../index.html" onclick="closeSlideMenu()">Wprowadzenie</a>
+            <a href="side1.html" onclick="closeSlideMenu()">Komentarze</a>
+            <a href="side2.html" onclick="closeSlideMenu()">Zmienne</a>
+            <a href="side3.html" onclick="closeSlideMenu()">Instrukcje Warunkowe</a>
+            <a href="side4.html" onclick="closeSlideMenu()">Pętle</a>
+            <a href="side5.html" onclick="closeSlideMenu()">Funkcje</a>
+            <a href="side6.html" onclick="closeSlideMenu()">Obsługa wyjątków </a>
+            <a href="side7.html" onclick="closeSlideMenu()">Klasy </a>
+            <a href="side8.html" onclick="closeSlideMenu()">Konstruktor </a>
+            <a href="side9.html" onclick="closeSlideMenu()">Dziedziczenie </a>
+            <a href="#" onclick="closeSlideMenu()">Ciąg dalszy nastąpi :)</a>
+            <!--
+            <a href="side10.html" onclick="closeSlideMenu()">Klasy Abstrakcyjne </a>
+            <a href="side11.html" onclick="closeSlideMenu()">Instrukcje Lambda </a>
+            <a href="side12.html" onclick="closeSlideMenu()">Listy,Hash ,Set </a>
+-->
+        </div>
+
+
+    </div>
+    <div class="main">
+
+        <h1>6.0 Funkcje</h1>
+        <span>Dart stawia na obiektwość wkońcu dlatego powstał . Funkcje w tym języku są obiekami w którym gdy nie określimy co ma zwrócić zawsze wzróci NULL . W parametrach funkcji możemy nadawać tytuły i w wywołaniu możemy wybrać tylko te co nas interesują odwołując się po tytułach innymi słowy nowa wizja posługiwania się funkcjami. </span>
+        <img src="../IMAGE/15581659296936.jpg">
+
+        <h3>6.1 Metody tworzenia funkcji</h3>
+        <pre>
+void main() {
+ funkcja1("niebieski",1);
+ funkcja2("czerwony",2);
+}
+<b>Pierwsza metoda z delkaracją zwracanego typu silnie zalecana</b>
+void funkcja1(String kolor,int numer){
+  print("funkcja1 kolor = $kolor  , numer  = $numer");
+}
+<b>Druga metoda bez delkaracji zwracanego typu ,odbywa się automatycznie</b>
+funkcja2(String kolor,int numer){
+  print("funkcja2 kolor = $kolor  , numer  = $numer");
+}</pre>
+        <span>Wynik</span>
+        <pre>
+funkcja1 kolor = niebieski  , numer  = 1
+funkcja2 kolor = czerwony  , numer  = 2</pre>
+        <span>Dla jedno linijkowych funkjcji</span>
+        <pre>
+void main() {
+ 
+  funkcja1(1,2);
+}
+
+<b>//Dla krótkich funkcj</b>   
+void funkcja1(int a,int b)=>(print("${a*b}"));
+</pre>
+        <h3>6.2 Opcjonalne parametry</h3>
+        <span>Za pomocą nawiasów kwadratowych możemy zaznaczyć te parametry które nie są obowiązkowe . Ich wartość w przypadku braku wyniesie domyślnie NULL no chyba ,że domyślnie przypiszemy jej jakąś wartość w przypadku braku. </span>
+        <pre>
+void main() {
+<b>//bez dodatkowego parametru</b>
+ funkcja1("niebieski",1);
+<b>//z dodatkowym parametrem</b> 
+ funkcja1("czerwony",2,"Adam");
+ 
+}
+<b>//Utworzenie opcjonalnego parametru z domyślną wartością </b>
+void funkcja1(String kolor,int numer,[String imie="nieznany"]){
+  
+  print("funkcja kolor = $kolor  , numer  = $numer imie : $imie");
+
+}</pre><span>Wynik</span>
+        <pre>
+<b>//bez dodatkowego parametru</b>
+funkcja kolor = niebieski  , numer  = 1 imie : nieznany
+<b>//z dodatkowym parametrem</b> 
+funkcja kolor = czerwony  , numer  = 2 imie : Adam</pre>
+        <h3>6.3 Nadawanie tytułów zmiennych</h3>
+        <span>Nadając tytuł zmiennym nie musimy znać kolejnosci ,a w paramaterach indentyfikować je to ich nazwie.
+        </span>
+        <pre>
+void main() {
+ 
+ funkcja1(kolor:"czarny",numer:2,imie:"Adam");
+  <b>//Nie muszą być pokolei jeżeli odwołujemy się po nazwie</b>
+ funkcja1(numer:2,kolor:"czerwony",imie:"Gregory");
+}
+  <b>//Otwiaramy klamrowy nawias i tytułami stają się nazwy zmiennych</b>
+void funkcja1({String kolor,int numer, String imie="nieznany"} ){
+ 
+  print("funkcja kolor = $kolor  , numer  = $numer imie : $imie");
+
+}</pre><span>Wynik</span>
+        <pre>
+funkcja kolor = czarny  , numer  = 2 imie : Adam
+funkcja kolor = czerwony  , numer  = 2 imie : Gregory</pre>
+        <footer>
+            <br>
+            <br>
+            <p>Stworzone przez: Paweł Krzyściak</p>
+            <p>Informacje Kontaktowe:</p>
+            <p> <a href="mailto:pawkrzysciak@gmail.com">
+                    pawkrzysciak@gmail.com</a>.</p>
+        </footer>
+    </div>
+
+
+</body></html>

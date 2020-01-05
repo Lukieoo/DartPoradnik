@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Podstawowe elementy składni programowania w Języku Dart .">
+    <meta name="keywords" content="Dart,Language,poradnik,kurs,Polska">
+    <meta name="author" content="Paweł Krzyściak">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dart poradnik</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="icon" href="../IMAGE/Dart-logo.png">
+
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <script src="../JS/script.js"></script>
+</head>
+
+<body class="welcome">
+    <span id="splash-overlay" class="splash"> </span>
+    <div class="RightMenu" id="menu0">
+        <a onclick="hideShow()">
+            <img src="https://pngimage.net/wp-content/uploads/2018/06/more-apps-icon-png-7.png" />
+            <span id="change">Zwiń</span></a>
+    </div>
+    <div class="RightMenu" id="menu1">
+        <a href="../index.html">
+            <img src="https://raw.githubusercontent.com/DinoLeung/TeleDart/master/example/dash_paper_plane.svg?sanitize=true" />
+            <span>Home</span></a>
+    </div>
+    <div class="RightMenu" id="menu2">
+        <a href="https://dart.dev/">
+            <img src="https://stickker.net/wp-content/uploads/2018/11/dart.png.png" />
+            <span>Dart</span></a>
+    </div>
+   <div class="RightMenu" id="menu3">
+        <a href="http://anioncode.pl/">
+            <img src="http://anioncode.pl/Img/rysunek3.png" />
+            <span>Strona</span></a>
+    </div>
+    <div id="content">
+
+
+        <div class="slide">
+            <a id="hamburger" href="#" onclick="openSlideMenu()">
+                <i class="fas fa-bars"></i>
+            </a>
+            <img id="logo" src="https://dart.dev/assets/shared/dart/logo+text/horizontal/white-e71fb382ad5229792cc704b3ee7a88f8013e986d6e34f0956d89c453b454d0a5.svg" alt="Somtehing gone wrong">
+            <div id="aligngites">
+                <a href="https://github.com/Lukieoo" target="_blank" class="right" id="space"><i class="fab fa-github"></i></a>
+
+                <a href="https://www.youtube.com/channel/UCseP9k1DwSAqzZ-iyeAlTvg" target="_blank" class="right" id="space"><i class="fab fa-youtube"></i></a>
+
+                <a href="http://anioncode.pl/" target="_blank" class="right" id="space"><i class="fab fa-font-awesome"></i></a>
+            </div>
+        </div>
+
+
+
+        <div id="menu" class="nav">
+            <a href="#" class="close" onclick="closeSlideMenu()">
+                <i class="fas fa-times"></i>
+            </a>
+            <a href="../index.html" onclick="closeSlideMenu()">Wprowadzenie</a>
+            <a href="side1.html" onclick="closeSlideMenu()">Komentarze</a>
+            <a href="side2.html" onclick="closeSlideMenu()">Zmienne</a>
+            <a href="side3.html" onclick="closeSlideMenu()">Instrukcje Warunkowe</a>
+            <a href="side4.html" onclick="closeSlideMenu()">Pętle</a>
+            <a href="side5.html" onclick="closeSlideMenu()">Funkcje</a>
+            <a href="side6.html" onclick="closeSlideMenu()">Obsługa wyjątków </a>
+            <a href="side7.html" onclick="closeSlideMenu()">Klasy </a>
+            <a href="side8.html" onclick="closeSlideMenu()">Konstruktor </a>
+            <a href="side9.html" onclick="closeSlideMenu()">Dziedziczenie </a>
+            <a href="#" onclick="closeSlideMenu()">Ciąg dalszy nastąpi :)</a>
+            <!--
+            <a href="side10.html" onclick="closeSlideMenu()">Klasy Abstrakcyjne </a>
+            <a href="side11.html" onclick="closeSlideMenu()">Instrukcje Lambda </a>
+            <a href="side12.html" onclick="closeSlideMenu()">Listy,Hash ,Set </a>
+-->
+        </div>
+
+
+    </div>
+    <div class="main">
+        <img src="../IMAGE/flowRoot826.png">
+        <h1>3.0 Zmienne</h1>
+        <p>Wypada wspomnieć ,że wszystkie typy zmiennych w Dart-cie są obiektami i wśród tych typów wyróżniamy :</p>
+        <ol>
+            <li>Liczby</li>
+            <ul>
+                <li>int</li>
+                <li>double</li>
+            </ul>
+            <li>Znaki
+            </li>
+            <ul>
+                <li>String</li>
+            </ul>
+            <li>Prawdy
+            </li>
+            <ul>
+                <li>bool</li>
+            </ul>
+            <li>Inne
+            </li>
+            <ul>
+                <li>List</li>
+                <li>Maps</li>
+                <li>Runes</li>
+                <li>Symbols</li>
+            </ul>
+        </ol>
+        <p>Jak słusznie zauważałeś Dart nie posiada zmiennych teypu long ani float.</p>
+        <h3>3.1 Deklaracja zmiennych</h3>
+        <p>Zmienne możemy wprowadzać do programu na kilka sposobów . </p>
+        <pre>
+void main() {
+
+  <b>//Tym sposbem deklarujemy wcześniej jakiego typu jest zmienna</b>
+  int calkowita = 10;
+  double zmiennoprzecinkowe =10.3;
+  String tablicaZnakow="Paweł";
+  bool prawda=true;
+  
+  <b>//Tu robimy to samo natomiast typ wybiera za nas kompilator</b> 
+  var calkowita_2 = 10;
+  var zmiennoprzecinkowe_2 =10.3;
+  var tablicaZnakowv_2="Paweł";
+  var prawdav_2=true;
+  
+}
+		
+		</pre>
+        <p>Ułatwia to przeniesienie się z języków w których są stosowane podobne metody wprowadzania danych np.JS </p>
+        <h3>3.2 String </h3>
+        <pre>
+void main() {
+<b>//Deklaracja zmiennych</b>
+ String s1='To';
+ String s2='ma';
+ String s3='tyle'; 
+ String s4='znaków';
+ <b>//Za pomocą '$' możemy dołączyć naszą zmnienną do ciągu nowej zmiennej 
+ //Natomiast w ${} między klamrami wprowadzamy funkcje która wzraca nam dane w postaci zmiennej String</b> 
+ String wiadomosc="$s1 $s2 $s3 $s4${(s1.length+s2.length+s3.length+s4.length).toString()}";
+  print(wiadomosc);
+  
+ 
+}
+		</pre>
+        <p>Wynik :</p>
+        <pre>
+To ma tyle znaków 14</pre>
+        <h3>3.3 Final and const </h3>
+        <p>Zmienną typu Final możemy deklarować tylko 1 raz natomiast napisanie jej zawartości okaże się błędem.
+        </p>
+        <code>final name="Peter"</code>
+        <p>Zmienną typu Const to stała .
+        </p>
+        <code>const PI=3.14</code>
+        <footer>
+            <br>
+            <br>
+            <p>Stworzone przez: Paweł Krzyściak</p>
+            <p>Informacje Kontaktowe:</p>
+            <p> <a href="mailto:pawkrzysciak@gmail.com">
+                    pawkrzysciak@gmail.com</a>.</p>
+        </footer>
+    </div>
+
+
+</body></html>
