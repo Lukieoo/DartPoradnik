@@ -1,6 +1,6 @@
 # web_kit
 
-A new Flutter project.
+A new Flutter project. I 'm using a web view in flutter to show my dart toturial .
 
 ## Getting Started
 
