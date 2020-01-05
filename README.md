@@ -2,6 +2,14 @@
 
 A new Flutter project. I 'm using a web view in flutter to show my dart toturial .
 
+
+Podstawy porgramowania w jęzku Dart w aplikacji stworzonej w frameworku flutter.
+
+https://lukieoo.github.io/DartPoradnik/
+
+
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
